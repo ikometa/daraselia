@@ -6,143 +6,143 @@
 </head>
 <style>html,
 body {
-    height: 100% !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-family: "Roboto", sans-serif !important;
-    background: #3b4760 !important;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background: #3b4760;
 }
 body {
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-    flex-direction: column !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
 }
 ::selection {
-    background: rgba(73, 96, 128, 0.55) !important;
+    background: rgba(73, 96, 128, 0.55);
 }
 .profilebox {
-    position: relative !important;
-    background: #22242a !important;
-    min-height: 230px !important;
-    max-width: 700px !important;
-    width: calc(60% - 120px) !important;
-    border-radius: 8px !important;
-    padding: 50px 20px 20px 100px !important;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19) !important;
-    display: flex !important;
-    flex-direction: column !important;
+    position: relative;
+    background: #22242a;
+    min-height: 230px;
+    max-width: 700px;
+    width: calc(60% - 120px);
+    border-radius: 8px;
+    padding: 50px 20px 20px 100px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
 }
 .profpic {
-    position: absolute !important;
-    top: 20px !important;
-    left: -60px !important;
-    height: 120px !important;
-    width: 120px !important;
-    border-radius: 50% !important;
-    border: 4px solid #22242a !important;
-    background: #22242a !important;
-    display: inline-block !important;
-    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12) !important;
+    position: absolute;
+    top: 20px;
+    left: -60px;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 4px solid #22242a;
+    background: #22242a;
+    display: inline-block;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
 }
 .prof-close {
-    position: absolute !important;
-    top: 10px !important;
-    right: 10px !important;
-    height: 30px !important;
-    line-height: 30px !important;
-    width: 30px !important;
-    background: transparent !important;
-    outline: 0 none !important;
-    border: none !important;
-    border-radius: 50% !important;
-    font-size: 18pt !important;
-    color: rgba(255,255,255,.2) !important;
-    cursor: pointer !important;
-    text-align: center !important;
-    transition: all 0.15s ease-in-out !important;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    background: transparent;
+    outline: 0 none;
+    border: none;
+    border-radius: 50%;
+    font-size: 18pt;
+    color: rgba(255,255,255,.2);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s ease-in-out;
 }
 .prof-close:active {
-    background: rgba(255,255,255,.02) !important;
-    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12) !important;
+    background: rgba(255,255,255,.02);
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
 }
 .prof-sm {
-    position: absolute !important;
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    top: 152px !important;
-    left: -20px !important;
-    width: 40px !important;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 152px;
+    left: -20px;
+    width: 40px;
 }
 .prof-sm .sm {
-    width: 40px !important;
-    height: 40px !important;
-    margin-bottom: 4px !important;
-    border-radius: 50% !important;
-    background: #22242a !important;
-    transition: all 0.15s ease-in-out !important;
-    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12) !important;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 4px;
+    border-radius: 50%;
+    background: #22242a;
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
 }
 .prof-sm .sm:hover {
-    background: #26282E !important;
+    background: #26282E;
 }
 .prof-sm .sm:active {
-    background: #31343b !important;
+    background: #31343b;
 }
 .prof-sm a {
-    display: inline-block !important;
-    height: 40px !important;
-    width: 40px !important;
-    border-radius: 50% !important;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
 }
 .prof-sm svg {
-    width: 30px !important;
-    height: 30px !important;
-    margin: 5px !important;
-    border-radius: 50% !important;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 50%;
 }
 .prof-sm path {
-    fill: rgba(255,255,255,.2) !important;
+    fill: rgba(255,255,255,.2);
 }
 .prof-name {
-    display: block !important;
-    margin: 0 !important;
-    color: white !important;
-    font-weight: normal !important;
-    font-size: 20pt !important;
+    display: block;
+    margin: 0;
+    color: white;
+    font-weight: normal;
+    font-size: 20pt;
 }
 .prof-user {
-    display: block !important;
-    margin: 0 !important;
-    color: rgba(255,255,255,.2) !important;
-    font-weight: normal !important;
-    font-size: 11pt !important;
+    display: block;
+    margin: 0;
+    color: rgba(255,255,255,.2);
+    font-weight: normal;
+    font-size: 11pt;
 }
 .user-tags {
-    margin: 20px 0 0 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
-    cursor: default !important;
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    cursor: default;
 }
 .user-tags .tag {
-    display: inline-block !important;
-    font-size: 8pt !important;
-    text-transform: lowercase !important;
-    color: rgba(255,255,255,.5) !important;
-    background: rgba(255,255,255,.07) !important;
-    height: 20px !important;
-    line-height: 20px !important;
-    padding: 0 10px !important;
-    border-radius: 10px !important;
-    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12) !important;
+    display: inline-block;
+    font-size: 8pt;
+    text-transform: lowercase;
+    color: rgba(255,255,255,.5);
+    background: rgba(255,255,255,.07);
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
 }
 .user-desc {
-    color: rgba(255,255,255,.7) !important;
-    font-size: 11pt !important;
-    line-height: 12pt !important;
-    flex: 1 0 auto !important;
+    color: rgba(255,255,255,.7);
+    font-size: 11pt;
+    line-height: 12pt;
+    flex: 1 0 auto;
 }</style>
 <body>
 	<section class="profilebox">
