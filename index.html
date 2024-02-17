@@ -1,177 +1,96 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Niko Daraselia</title>
-</head>
-<style>html,
-body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-    background: #3b4760;
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Niko Daraselia</title>
+    </head>
+	<style>@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");/*----- VARIABLES CSS Y SASS -----*//*Varibles sass*//*Variables css*//*Colores*/:root {  --first-color: #02093f;  --black-color: #000;  --white-color: #FFF;}/*Fuente y tipografia*/:root {  --body-font: 'Poppins', sans-serif;  --h1-font-size: 2.5rem;  --h2-font-size: 1rem;  --normal-font-size: 0.93rem;  --small-font-size: 0.81rem;}@media screen and (min-width: 768px) {  :root {    --h1-font-size: 4.5rem;    --h2-font-size: 2rem;    --normal-font-size: 1rem;    --small-font-size: 1.37rem;  }}/*z index*/:root {  --z-back: -10;  --z-normal: 1;  --z-tooltip: 10;  --z-fixed: 100;  --z-modal: 1000;}/*----- BASE -----*/*, ::before, ::after {  -webkit-box-sizing: border-box;          box-sizing: border-box;}body {  margin: 3rem 0 0 0;  font-family: var(--body-font);  background-color: var(--black-color);  color: var(--white-color);  font-weight: 700;  overflow: hidden;}h1, h2 {  margin: 0;}ul {  margin: 0;  padding: 0;  list-style: none;}a {  text-decoration: none;}img {  max-width: 100%;  height: auto;}/*----- LAYOUT -----*/.bd-grid {  max-width: 1200px;  margin-left: 1rem;  margin-right: 1rem;}.l-header {  width: 100%;  position: fixed;  top: 0;  left: 0;  z-index: var(--z-fixed);  background-color: var(--black-color);}/*----- PAGES -----*//*Nav*/.nav {  height: 3rem;  display: -webkit-box;  display: -ms-flexbox;  display: flex;  -webkit-box-pack: justify;      -ms-flex-pack: justify;          justify-content: space-between;  -webkit-box-align: center;      -ms-flex-align: center;          align-items: center;  font-weight: 700;}@media screen and (max-width: 768px) {  .nav__menu {    position: fixed;    top: -100%;    left: 0;    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--black-color)), to(var(--first-color)));    background-image: linear-gradient(var(--black-color), var(--first-color));    width: 100%;    height: 45%;    padding: 1.5rem;    border-radius: 0 0 1rem 1rem;    -webkit-transition: .5s;    transition: .5s;  }}.nav__list {  text-align: center;}.nav__item {  margin-bottom: 2rem;}.nav__link {  color: var(--text-color);}.nav__link:hover {  position: relative;}.nav__link:hover::after {  position: absolute;  content: '';  width: 1.5rem;  height: 0.1875rem;  left: 0.125rem;  top: 2.125rem;  background-color: var(--first-color);}.nav__logo {  font-size: var(--normal-font-size);  color: var(--white-color);}.nav__toggle {  font-size: 1.5rem;  cursor: pointer;}/*Aparecer menu*/.show {  top: 3rem;}/*Home*/.l-main {  height: calc(100vh - 3rem);  background-color: var(--black-color);}.home {  display: -ms-grid;  display: grid;  -ms-grid-columns: 1fr;      grid-template-columns: 1fr;  -ms-grid-rows: max-content max-content;      grid-template-rows: -webkit-max-content -webkit-max-content;      grid-template-rows: max-content max-content;  -ms-flex-line-pack: distribute;      align-content: space-around;  row-gap: 2.3rem;  height: 100%;  font-weight: 700;}.home__information {  padding-left: 1.5rem;  border-left: 5px solid var(--white-color);  z-index: var(--z-tooltip);}.home__pressent {  font-size: var(--small-font-size);}.home__title {  font-size: var(--h1-font-size);}.home__skill {  font-size: var(--h2-font-size);}.home__button {  display: inline-block;  margin-top: 1.5rem;  font-size: .75rem;  color: var(--white-color);  padding: .625rem 1rem;  border-radius: .25rem;  background-image: -webkit-gradient(linear, left top, right top, from(var(--black-color)), to(var(--first-color)));  background-image: linear-gradient(to right, var(--black-color), var(--first-color));}.home__img {  position: absolute;  right: 0;  bottom: 0;  width: 291px;  z-index: var(--z-normal);}.home__social {  display: -webkit-box;  display: -ms-flexbox;  display: flex;  -webkit-box-orient: vertical;  -webkit-box-direction: normal;      -ms-flex-direction: column;          flex-direction: column;  padding-bottom: 1rem;}.home__social-icon {  margin-bottom: 2rem;  font-size: 1.33rem;  cursor: pointer;}.home__social-icon:hover {  color: var(--first-color);}/*----- MEDIA QUERIES -----*/@media screen and (min-width: 768px) {  body {    margin: 0;  }  .l-main {    height: 100vh;  }  .nav {    height: 4rem;  }  .nav__list {    display: -webkit-box;    display: -ms-flexbox;    display: flex;    padding-top: 0;  }  .nav__item {    margin-left: 3rem;    margin-bottom: 0;  }  .nav__toggle, .nav__close {    display: none;  }  .nav__link {    text-transform: initial;  }  .home {    -ms-grid-rows: max-content 20px;        grid-template-rows: -webkit-max-content 20px;        grid-template-rows: max-content 20px;    -ms-flex-line-pack: center;        align-content: center;  }  .home__information {    margin-top: 2rem;  }  .home__social {    -webkit-box-orient: horizontal;    -webkit-box-direction: normal;        -ms-flex-direction: row;            flex-direction: row;    padding-top: 8rem;    padding-bottom: 0;  }  .home__social-icon {    margin-right: 2rem;    margin-bottom: 0;  }  .home__img {    width: 553px;    right: 5%;	top: 10%;  }}@media screen and (min-width: 1200px) {  .bd-grid {    margin-left: auto;    margin-right: auto;  }}/*ANIMATE*/.overlay {  position: absolute;  top: 0;  left: 0;  width: 100%;  height: 100%;  z-index: var(--z-modal);}.first {  background-color: var(--first-color);}.second {  background-color: var(--first-color);  left: 33.3%;}.third {  background-color: var(--first-color);  left: 66.6%;}</style>
+    <body>
+        <!-- OVERLAY -->
+        <div class="overlay first"></div>
+        <div class="overlay second"></div>
+        <div class="overlay third"></div>
+
+        <!-- HEADER -->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Daraselia.ru</a>
+                </div>
+
+                <div onclick="location.href='/';" class="nav__toggle">
+                    <ion-icon name="close"></ion-icon>
+                </div>
+            </nav>
+        </header>
+
+        <!-- MAIN -->
+        <main class="l-main bd-grid">
+            <div class="home">
+                <div class="home__information">
+                    <span class="home__pressent anime-text">Привет, я</span>
+                    <h1 class="home__title anime-text">Niko</h1>
+                    <span class="home__skill anime-text">веб-разраб</span>
+                    
+                    <div>
+                        <a href="https://t.me/gorech" class="home__button anime-text">contact me <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;width: 12px;" xml:space="preserve"><g><g><path d="M501.974,41.949c-8.237-7.547-19.944-10.062-30.555-6.565L21.231,183.785c-12.269,4.044-20.589,14.996-21.196,27.899 c-0.606,12.904,6.649,24.589,18.483,29.768l90.405,39.554l266.17-147.723c6.501-3.608,14.66-1.922,19.2,3.961 c4.541,5.885,4.1,14.204-1.037,19.576L227.319,330.325L193.287,453.28l81.681-61.162l96.589,79.039 c5.626,4.606,12.502,7.008,19.513,7.008c3.338-0.001,6.708-0.545,9.986-1.657c10.166-3.447,17.702-11.744,20.159-22.193 l89.965-382.503C513.737,60.939,510.211,49.496,501.974,41.949z" fill="#000000" style="fill: rgb(255, 255, 255);"></path></g></g><g><g><path d="M132.476,302.325l31.261,144.992l35.612-128.661c0.662-2.394,1.907-4.587,3.623-6.381l100.029-104.59L132.476,302.325z" fill="#000000" style="fill: rgb(255, 255, 255);"></path></g></g></svg></a>
+                    </div>
+                </div>
+
+                <div class="home__img">
+                    <img src="https://psv4.userapi.com/c909628/u123970709/docs/d20/c5111e6645d4/img.jpg?extra=i2wD-_gaX99Qls6rFwAaQC9FSzspS26N_TWcJFkOpx4coZ7vUFy3TSl4O0JUx0FQY3-0UVBHOjcHxzJjMP89rnqpUVH55piOizMxmTCUHdEcsRpZSYuTR9a2cplQZXVaD45CpbJyGdSf8ja0Lon0F7Ax" alt="">
+                </div>
+                
+                <div class="home__social">
+                    <a href="https://vk.com/nkkko" style="color:white;"><ion-icon name="logo-vk" class="home__social-icon"></ion-icon></a>
+                    <a href="https://instagram.com/darasseliaa" style="color:white;"><ion-icon name="logo-instagram" class="home__social-icon"></ion-icon></a>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+        <!-- MAIN -->
+        <script>/* MENU SHOW */ 
+const showMenu = (toggleId, navId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId)
+
+    if(toggle && nav){
+        toggle.addEventListener('click', ()=>{
+            nav.classList.toggle('show')
+        })
+    }
 }
-body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-    flex-direction: column;
-}
-::selection {
-    background: rgba(73, 96, 128, 0.55);
-}
-.profilebox {
-    position: relative;
-    background: #22242a;
-    min-height: 230px;
-    max-width: 700px;
-    width: calc(40% - 120px);
-    border-radius: 8px;
-    padding: 50px 20px 20px 100px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
-    display: flex;
-    flex-direction: column;
-    transform: scale(1.85, 1.85);
-}
-.profpic {
-    position: absolute;
-    top: 20px;
-    left: -60px;
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    border: 4px solid #22242a;
-    background: #22242a;
-    display: inline-block;
-    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-}
-.prof-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    height: 30px;
-    line-height: 30px;
-    width: 30px;
-    background: transparent;
-    outline: 0 none;
-    border: none;
-    border-radius: 50%;
-    font-size: 18pt;
-    color: rgba(255,255,255,.2);
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.15s ease-in-out;
-}
-.prof-close:active {
-    background: rgba(255,255,255,.02);
-    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-}
-.prof-sm {
-    position: absolute;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    top: 152px;
-    left: -20px;
-    width: 40px;
-}
-.prof-sm .sm {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 4px;
-    border-radius: 50%;
-    background: #22242a;
-    transition: all 0.15s ease-in-out;
-    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-}
-.prof-sm .sm:hover {
-    background: #26282E;
-}
-.prof-sm .sm:active {
-    background: #31343b;
-}
-.prof-sm a {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-}
-.prof-sm svg {
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-    border-radius: 50%;
-}
-.prof-sm path {
-    fill: rgba(255,255,255,.2);
-}
-.prof-name {
-    display: block;
-    margin: 0;
-    color: white;
-    font-weight: normal;
-    font-size: 20pt;
-}
-.prof-user {
-    display: block;
-    margin: 0;
-    color: rgba(255,255,255,.2);
-    font-weight: normal;
-    font-size: 11pt;
-}
-.user-tags {
-    margin: 20px 0 0 0;
-    padding: 0;
-    list-style: none;
-    cursor: default;
-}
-.user-tags .tag {
-    display: inline-block;
-    font-size: 8pt;
-    text-transform: lowercase;
-    color: rgba(255,255,255,.5);
-    background: rgba(255,255,255,.07);
-    height: 20px;
-    line-height: 20px;
-    padding: 0 10px;
-    border-radius: 10px;
-    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
-}
-.user-desc {
-    color: rgba(255,255,255,.7);
-    font-size: 11pt;
-    line-height: 12pt;
-    flex: 1 0 auto;
-}</style>
-<body>
-	<section class="profilebox">
-		<aside>
-			<img class="profpic" src="https://sun1-88.userapi.com/impg/v3pushsqXql2wYQ-WBMY3JBKAkFArMGtiSLl2Q/akOeaShZAys.jpg?size=2560x1920&quality=95&sign=85092f7a36fd193d15111fe6ffeeabe2&type=album" alt="profile picture" />
-			<button class="prof-close" type="button">&times;</button>
-                         <ul class="prof-sm">
-				<li class="sm">
-					<a href="https://vk.com/nkkko">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" zoomAndPan="magnify" viewBox="0 0 30 30" height="24" preserveAspectRatio="xMidYMid meet" version="1.0" id="IconChangeColor"><defs><clipPath id="id1"><path d="M 2.371094 2.394531 L 26 2.394531 L 26 26 L 2.371094 26 Z M 2.371094 2.394531 " clip-rule="nonzero" id="mainIconPathAttribute" fill="#000000"></path></clipPath></defs><g clip-path="url(#id1)"><path fill="#000000" d="M 13.496094 2.597656 C 10.730469 2.804688 8.210938 3.941406 6.230469 5.875 C 3.625 8.414062 2.375 12.011719 2.839844 15.625 C 3.414062 20.140625 6.601562 23.902344 10.976562 25.234375 C 14.359375 26.265625 18.125 25.652344 20.992188 23.613281 C 24.515625 21.101562 26.347656 16.9375 25.804688 12.675781 C 25.230469 8.15625 22.042969 4.394531 17.667969 3.0625 C 16.304688 2.660156 14.914062 2.503906 13.496094 2.601562 Z M 14.378906 9.773438 C 14.96875 9.832031 15.265625 9.925781 15.398438 10.097656 C 15.433594 10.144531 15.488281 10.261719 15.523438 10.359375 C 15.589844 10.5625 15.59375 10.792969 15.550781 12.527344 C 15.523438 13.609375 15.539062 13.945312 15.628906 14.183594 C 15.726562 14.460938 15.960938 14.585938 16.164062 14.480469 C 16.347656 14.382812 16.777344 13.914062 17.058594 13.492188 C 17.707031 12.53125 18.101562 11.789062 18.574219 10.640625 C 18.671875 10.414062 18.800781 10.261719 18.933594 10.226562 C 18.984375 10.210938 19.742188 10.199219 20.667969 10.195312 L 22.308594 10.191406 L 22.449219 10.25 C 22.632812 10.304688 22.714844 10.429688 22.695312 10.621094 C 22.695312 10.980469 22.320312 11.722656 21.675781 12.625 C 21.585938 12.75 21.253906 13.195312 20.933594 13.613281 C 20.230469 14.535156 20.078125 14.75 19.972656 14.976562 C 19.835938 15.257812 19.871094 15.492188 20.082031 15.765625 C 20.140625 15.84375 20.453125 16.15625 20.769531 16.460938 C 21.65625 17.3125 22.058594 17.757812 22.386719 18.246094 C 22.621094 18.601562 22.714844 18.859375 22.675781 19.085938 C 22.65625 19.207031 22.535156 19.355469 22.394531 19.425781 C 22.230469 19.511719 21.976562 19.527344 20.582031 19.546875 L 19.261719 19.5625 L 19.046875 19.492188 C 18.503906 19.3125 18.140625 19.007812 17.316406 18.054688 C 16.859375 17.527344 16.519531 17.265625 16.285156 17.265625 C 16.070312 17.265625 15.789062 17.550781 15.679688 17.910156 C 15.597656 18.148438 15.570312 18.335938 15.542969 18.75 C 15.515625 19.246094 15.457031 19.355469 15.15625 19.480469 C 15.046875 19.53125 13.683594 19.546875 13.324219 19.507812 C 12.601562 19.429688 11.933594 19.199219 11.269531 18.8125 C 10.304688 18.25 9.714844 17.742188 9.082031 16.9375 C 7.984375 15.53125 7.234375 14.335938 6.324219 12.535156 C 5.976562 11.832031 5.558594 10.925781 5.492188 10.707031 C 5.425781 10.484375 5.519531 10.300781 5.738281 10.230469 C 5.8125 10.207031 6.234375 10.195312 7.191406 10.179688 L 8.539062 10.167969 L 8.695312 10.226562 C 8.941406 10.320312 9.042969 10.445312 9.214844 10.851562 C 9.359375 11.195312 10.136719 12.753906 10.378906 13.191406 C 10.628906 13.628906 10.890625 14 11.121094 14.214844 C 11.402344 14.492188 11.527344 14.558594 11.726562 14.542969 C 11.894531 14.527344 11.9375 14.488281 12.042969 14.261719 C 12.296875 13.714844 12.335938 11.867188 12.109375 11.140625 C 11.980469 10.726562 11.785156 10.570312 11.246094 10.453125 C 11.152344 10.433594 11.152344 10.398438 11.238281 10.273438 C 11.445312 9.976562 11.816406 9.832031 12.523438 9.773438 C 12.910156 9.742188 14.058594 9.738281 14.375 9.773438 Z M 14.378906 9.773438 " fill-opacity="1" fill-rule="nonzero" id="mainIconPathAttribute"></path></g></svg>
-					</a>
-				</li>
-				<li class="sm">
-					<a href="https://t.me/gorech">
-						<!-- icon666.com - MILLIONS vector ICONS FREE --><!-- icon666.com - MILLIONS vector ICONS FREE --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 230 200" style="enable-background:new 0 0 189.473 189.473;" xml:space="preserve"><g><path d="M152.531,179.476c-1.48,0-2.95-0.438-4.211-1.293l-47.641-32.316l-25.552,18.386c-2.004,1.441-4.587,1.804-6.914,0.972 c-2.324-0.834-4.089-2.759-4.719-5.146l-12.83-48.622L4.821,93.928c-2.886-1.104-4.8-3.865-4.821-6.955 c-0.021-3.09,1.855-5.877,4.727-7.02l174.312-69.36c0.791-0.336,1.628-0.53,2.472-0.582c0.302-0.018,0.605-0.018,0.906-0.001 c1.748,0.104,3.465,0.816,4.805,2.13c0.139,0.136,0.271,0.275,0.396,0.42c1.11,1.268,1.72,2.814,1.835,4.389 c0.028,0.396,0.026,0.797-0.009,1.198c-0.024,0.286-0.065,0.571-0.123,0.854L159.898,173.38c-0.473,2.48-2.161,4.556-4.493,5.523 C154.48,179.287,153.503,179.476,152.531,179.476z M104.862,130.579l42.437,28.785L170.193,39.24l-82.687,79.566l17.156,11.638 C104.731,130.487,104.797,130.533,104.862,130.579z M69.535,124.178l5.682,21.53l12.242-8.809l-16.03-10.874 C70.684,125.521,70.046,124.893,69.535,124.178z M28.136,86.782l31.478,12.035c2.255,0.862,3.957,2.758,4.573,5.092l3.992,15.129 c0.183-1.745,0.974-3.387,2.259-4.624L149.227,38.6L28.136,86.782z"></path></g></svg>
-					</a>
-				</li>
-			</ul>
-		</aside>
-		<header>
-			<h1 class="prof-name">Niko Daraselia</h1>
-			<h4 class="prof-user">@nkkko</h4>
-		</header>
-		<main class="user-desc">
-			<p>
-				Здесь что-то должно быть...
-			</p>
-		</main>
-	</section>
-</body>
+
+
+/*----- ANIMATE -----*/
+// OVERLAY
+gsap.to(".first", 0.2, {delay: .5, top: "-100%", ease: Expo.easeInOut});
+gsap.to(".second", 0.4, {delay: .7, top: "-100%", ease: Expo.easeInOut});
+gsap.to(".third", 0.6, {delay: .9, top: "-100%", ease: Expo.easeInOut});
+
+// IMG
+gsap.from('.home__img', {opacity: 0, duration: 1.1, delay: 1.1, x: 60})
+
+// INFORMATION
+gsap.from('.home__information', {opacity: 0, duration: 1.5, delay: 1.5, y: 25})
+gsap.from('.anime-text', {opacity: 0, duration: 3, delay: 2.3, y: 25, ease:'expo.out', stagger: .3})
+
+// NAV ITEM
+gsap.from('.nav__logo', {opacity:0, duration: 2, delay: 2.2, y: 25, ease:'expo.out'});
+gsap.from('.nav__item', {opacity: 0, duration: 2, delay: 2.2, y: 25, ease:'expo.out', stagger: .2})
+
+// SOCIAL
+gsap.from('.home__social-icon', {opacity: 0, duration: 2, delay: 2, y: 25, ease:'expo.out', stagger: .2})
+
+
+gsap.from('.nav__toggle', {opacity: 0, duration: 1.1, delay: 1.1, x: 60})</script>
+    
+        <!-- ICONS -->
+        <script  type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    </body>
 </html>
